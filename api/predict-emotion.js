@@ -30,8 +30,7 @@ module.exports = async (req, res) => {
             .expandDims(-1);
 
         // Load model from files
-        const modelPath = join(modelPath, 'model.json');
-        const emotionModel = await tf.loadLayersModel(`file://${modelPath}`);
+        const emotionModel = await tf.loadLayersModel(`file://${join(modelPath, 'model.json')}`);
 
         const prediction = emotionModel.predict(normalizedTensor).dataSync();
         const emotions = ['angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral'];

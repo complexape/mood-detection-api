@@ -30,8 +30,7 @@ module.exports = async (req, res) => {
             .expandDims(-1);
 
         // Load model from files
-        const modelPath = join(modelPath, 'model.json');
-        const tiredModel = await tf.loadLayersModel(`file://${modelPath}`);
+        const tiredModel = await tf.loadLayersModel(`file://${join(modelPath, 'model.json')}`);
 
         const prediction = tiredModel.predict(normalizedTensor).dataSync();
         res.status(200).json({"closed_eye": prediction[0]});
