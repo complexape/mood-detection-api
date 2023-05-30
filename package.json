@@ -1,0 +1,24 @@
+{
+  "name": "mood-detector",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "vercel deploy --prod",
+    "start": "vercel dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.6.0",
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "i": "^0.3.7",
+    "micro": "^10.0.1",
+    "npm": "^9.6.7",
+    "sharp": "^0.32.1",
+    "tensorflow-lambda": "^1.0.2",
+    "tfjs-node-lambda": "^2.0.32"
+  }
+}
