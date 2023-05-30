@@ -3,7 +3,7 @@ const sharp = require('sharp');
 const { join } = require('path');
 const fs = require('fs');
 
-const modelPath = join(modelPath);
+const modelPath = join(process.cwd(), 'models', 'emotion_model');
 
 // Let vercel know we're using shard files!
 const shard1 = fs.readFileSync(join(modelPath, 'group1-shard1of3.bin'));
